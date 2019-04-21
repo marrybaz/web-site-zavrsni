@@ -31,9 +31,8 @@ h3{
     color: #488b8f;
     
 }
-
-
-
+ 
+ 
 /* Navbar */
 
 .navbar{
@@ -74,6 +73,14 @@ h3{
     text-align: center;
 }
 
+.img-logo{
+    height: 100px;
+    width: 100px;;
+    background-image:url('../images/logo.png');
+    background-size:cover;
+    background-position:center;
+}
+
 .naslov{
     color: #faf9f9;
     margin: 0 auto;
@@ -96,7 +103,7 @@ h3{
 .grid-cont {
     display: grid;
     /* grid-template-columns: repeat(4, auto); */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
     grid-auto-rows: 300px;
     grid-auto-flow: dense;  /*popunjava rupe*/
     grid-gap: 5px;
@@ -135,10 +142,39 @@ h3{
   
 }
 
+@media only screen and (max-width: 600px) {
+    .horizontal, .large, .vertical {
+        grid-column: span 1;        
+        grid-row: span 1;        
+    }
+    .grid-cont {
+        display: block;
+    }
+    .naslov {
+        width: 80%;
+    }
+    h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+    .logo{
+        width: 5rem;
+    }    
+    .img-logo{
+        height: 54px;
+        width: 100px;
+        background-image:url('../images/logoside.png');
+        background-size:cover;
+        background-position:center;        
+
+    }    
+}
+
+
 .large {
     grid-row: span 2;
-    grid-column: span 2;
-  
+    grid-column: span 2;     
 }
 /* Prodacts slider*/
 
