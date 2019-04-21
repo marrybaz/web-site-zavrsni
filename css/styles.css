@@ -142,36 +142,6 @@ h3{
   
 }
 
-@media only screen and (max-width: 600px) {
-    .horizontal, .large, .vertical {
-        grid-column: span 1;        
-        grid-row: span 1;        
-    }
-    .grid-cont {
-        display: block;
-    }
-    .naslov {
-        width: 80%;
-    }
-    h1 {
-        font-size: 2rem;
-        font-weight: 700;
-        line-height: 1.5;
-    }
-    .logo{
-        width: 5rem;
-    }    
-    .img-logo{
-        height: 54px;
-        width: 100px;
-        background-image:url('../images/logoside.png');
-        background-size:cover;
-        background-position:center;        
-
-    }    
-}
-
-
 .large {
     grid-row: span 2;
     grid-column: span 2;     
