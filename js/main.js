@@ -20,8 +20,8 @@ let tekst = [
 ];
 
 //inicijalizacija podataka
-d('slika').src=niz[0];
-d('sadrzaj').innerHTML=tekst[0];
+d('slika').src = niz[0];
+d('sadrzaj').innerHTML = tekst[0];
 let index = 0;
 
 function sledeci() {
@@ -30,8 +30,8 @@ function sledeci() {
     if (index == niz.length) {
         index = 0;
     }
-    d('slika').src = niz[index]; 
-    d('sadrzaj').innerHTML=tekst[index];   
+    d('slika').src = niz[index];
+    d('sadrzaj').innerHTML = tekst[index];
 };
 
 function prethodni() {
@@ -40,7 +40,7 @@ function prethodni() {
         index = niz.length - 1;
     }
     d('slika').src = niz[index];
-    d('sadrzaj').innerHTML=tekst[index];
+    d('sadrzaj').innerHTML = tekst[index];
 };
 
 d('desno').addEventListener('click', sledeci);
@@ -48,13 +48,13 @@ d('levo').addEventListener('click', prethodni);
 d('start-stop').addEventListener('click', toggleInterval)
 
 function toggleInterval() {
-    console.log(d('start-stop').classList);    
+    console.log(d('start-stop').classList);
     if (d('start-stop').classList.contains('fa-play-circle')) {
-        d('start-stop').classList.replace('fa-play-circle','fa-pause-circle');
+        d('start-stop').classList.replace('fa-play-circle', 'fa-pause-circle');
         sledeci();
         intervalId = setInterval(sledeci, 4000);
     } else {
-        d('start-stop').classList.replace('fa-pause-circle','fa-play-circle');
+        d('start-stop').classList.replace('fa-pause-circle', 'fa-play-circle');
         clearInterval(intervalId);
     }
 };
@@ -75,4 +75,12 @@ function getInfo(e) {
 let infos = c('info');
 for (var i = 0; i < infos.length; i++) {
     infos[i].addEventListener('click', getInfo);
-  }
+}
+
+$(".info-rotate")
+    .mouseover(function () {        
+        $("#info-" + this.id).removeClass("info-hidden").addClass("info-visible");
+    })
+    .mouseleave(function () {        
+        $("#info-" + this.id).removeClass("info-visible").addClass("info-hidden");
+    });

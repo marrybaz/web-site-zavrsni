@@ -8,12 +8,12 @@
 
   <!-- favicon -->
   <link rel="shortcut icon" href="images/favicon.png" type="image/png">
-  
+
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900|Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  
+
 
   <!-- css stylesheets -->
   <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/bootstrap.css" />
@@ -24,7 +24,7 @@
   <script src="bootstrap/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="bootstrap/bootstrap.js"></script>
 
 </head>
@@ -33,8 +33,10 @@
 
   <section id="title">
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light">        
-        <a class="navbar-brand" href=""><div class="container-fluid img-logo"></div></a>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="">
+          <div class="container-fluid img-logo"></div>
+        </a>
         <!-- <a class="navbar-brand" href=""><img class="logo" src="images/logo.png" alt=""></a> -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
           <span class="navbar-toggler-icon"></span>
@@ -56,34 +58,45 @@
     </div>
 
     <!-- Title -->
-    <div class="container-fluid naslovni">
-      <h1 class="naslov">Voce i povrce, okupano suncem, uzgajano s ljubavlju.</h1>
+    <div class="container-fluid title">
+      <h1 class="big-heading">Voce i povrce, okupano suncem, uzgajano s ljubavlju.</h1>
     </div>
   </section>
 
 
-  <!-- Prodacts -->
-  <section id="prodacts">
+  <!-- products -->
+  <section id="products">
 
     <div>
       <h3>Nasi proizvodi</h3>
     </div>
 
     <div class="grid-cont">
-      <div class="grid-item large" ><img src="images/paprika.jpg" alt="paprika-image"><i data-url="wikipedia.com/paprika" id="info-paprika" class="info fas fa-info-circle fa-4x"></i></div>
-      <div class="grid-item large"><img  src="images/patlidzan.jpg" alt=""><i class="info fas fa-info-circle fa-4x"></i></div>
-      <div class="grid-item vertical"><img  src="images/paradajz.jpg" alt=""><i class="info fas fa-info-circle fa-4x"></i></div>
-      <div class="grid-item horizontal"><img  src="images/jagode.jpg" alt=""><i class="info fas fa-info-circle fa-4x"></i></div>
-      <div class="grid-item horizontal"><img  src="images/maline.jpg" alt=""><i class="info fas fa-info-circle fa-4x"></i></div>
-      <div class="grid-item vertical"><img src="images/kupine.jpg" alt=""><i class="info fas fa-info-circle fa-4x"></i></div>
-      
+      <div id="paprika" class="grid-item large info-rotate"><img src="images/paprika.jpg" alt="paprika-image">        
+        <i data-url="wikipedia.com/paprika" id="info-paprika" class="info fas fa-info-circle info-hidden"></i>
+      </div>
+      <div id="patlidzan" class="grid-item large info-rotate"><img src="images/patlidzan.jpg" alt="patlidzan-image">
+        <i data-url="wikipedia.com/paprika" id="info-patlidzan" class="info fas fa-info-circle info-hidden"></i>
+      </div>
+      <div id="paradajz" class="grid-item vertical info-rotate"><img src="images/paradajz.jpg" alt="paradajz-image">
+        <i id="info-paradajz" data-url="wikipedia.com/paprika" class="info fas fa-info-circle info-hidden"></i>
+      </div>
+      <div id="jagode" class="grid-item horizontal info-rotate"><img src="images/jagode.jpg" alt="jagode-image">
+        <i id="info-jagode" data-url="wikipedia.com/paprika" class="info fas fa-info-circle info-hidden"></i>
+      </div>
+      <div id="maline" class="grid-item horizontal info-rotate"><img src="images/maline.jpg" alt="maline-image">
+        <i id="info-maline" data-url="wikipedia.com/paprika" class="info fas fa-info-circle info-hidden"></i>
+      </div>
+      <div id="kupine" class="grid-item vertical info-rotate"><img src="images/kupine.jpg" alt="kupine-image">
+        <i id="info-kupine" data-url="wikipedia.com/paprika" class="info fas fa-info-circle info-hidden"></i>
+      </div>
     </div>
 
   </section>
 
 
-  <!-- Prodacts slider -->
-  <section id="prodacts-slider">
+  <!-- products slider -->
+  <section id="products-slider">
 
     <div class="container-fluid wrapper">
       <div class="drzac">
