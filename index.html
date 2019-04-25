@@ -19,6 +19,7 @@
   <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/bootstrap.css" />
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/styles-resp.css">
+  <link rel="stylesheet" href="css/styles-contact.css">
 
   <!-- bootstrap scripts -->
   <script src="bootstrap/jquery.js"></script>
@@ -50,7 +51,7 @@
               <a class="nav-link" href="#pricing">Cene</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#footer">Kontakt</a>
+              <a class="nav-link" href="#contact-btn">Kontakt</a>
             </li>
           </ul>
         </div>
@@ -72,7 +73,7 @@
     </div>
 
     <div class="grid-cont">
-      <div id="paprika" class="grid-item large info-rotate"><img src="images/paprika.jpg" alt="paprika-image">        
+      <div id="paprika" class="grid-item large info-rotate"><img src="images/paprika.jpg" alt="paprika-image">
         <i data-url="wikipedia.com/paprika" id="info-paprika" class="info fas fa-info-circle info-hidden"></i>
       </div>
       <div id="patlidzan" class="grid-item large info-rotate"><img src="images/patlidzan.jpg" alt="patlidzan-image">
@@ -112,27 +113,73 @@
 
   </section>
 
-  <!-- Pricing -->
-  <section id="pricing">
+  <!-- Contact -->
+  <section id="contact">
 
-    <h2></h2>
-    <p></p>
+    <div class="wrapper ">
+      <div class="row">
+        <div class="col-md-4 contact-info">
+        <ul class="contact-list">
+          <li class="contact-item">Njivica DOO</li>
+          <li class="contact-item">Mladenovac</li>
+          <li class="contact-item">Koracica</li>
+          <li class="contact-item">Put srndaca 12</li>
+          <li class="contact-item"><a href="mailto:mbazovic@live.com">njivicadoo@gmail.com</a></li>
+          <li class="contact-item"><a href="callto:0612874509">+381 63 2874509</a></li>
+        </ul>
 
-    <div class="row">
+        <button id="contact-btn">Kontaktirajte nas</button>
+      </div>
 
-      <div class="pricing-col col-lg-4 col-md-6">
-        <div class="card">
-          <div class="card-header">
-            <h3></h3>
-          </div>
-          <div class="card-body">
-            <h2></h2>
-            <p></p>
-            <p></p>
-            <p></p>
-            <button class="btn btn-outline-dark btn-lg btn-block" type="button"></button>
-          </div>
+      <div class="map col-md-8">
+          <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=20.577178001403812%2C44.44079693120669%2C20.633826255798343%2C44.46809119658819&amp;layer=mapnik&amp;marker=44.45443034187563%2C20.605502128601074"></iframe><br /><small><a href="https://www.openstreetmap.org/?mlat=44.4544&amp;mlon=20.6055#map=15/44.4544/20.6055">View
+              Larger Map</a></small>
+      </div>
+      </div>
+
+      
+
+
+      <div id="contactModal" class="modal">
+
+
+        <div class="modal-content">
+          <span class="close">&times;</span>
+
+          <form action="mailto:mbazovic@live.com" method="POST" enctype="text/plain">
+            <div class="row">
+              <div class="col-md-4 small-coll">
+                <label for="name">Unesite ime:</label>
+              </div>
+              <div class="col-md-8 medium-coll">
+                <input id="name" type="text" name="ime">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 small-coll">
+                <label for="email">Vas email:</label>
+              </div>
+              <div class="col-md-8 medium-coll">
+                <input id="email" type="email" name="email">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 small-coll">
+                <label for="message">Vasa poruka:</label>
+              </div>
+              <div class="col-md-8 medium-coll">
+                <textarea name="message" id="message" cols="20" rows="10"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 big-coll">
+                <input type="submit" value="Posaljite">
+              </div>
+            </div>
+          </form>
+
         </div>
+
       </div>
 
     </div>

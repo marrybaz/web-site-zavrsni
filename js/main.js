@@ -84,3 +84,21 @@ $(".info-rotate")
     .mouseleave(function () {        
         $("#info-" + this.id).removeClass("info-visible").addClass("info-hidden");
     });
+
+//open contact modal
+
+    d('contact-btn').onclick = function() {
+        d('contactModal').style.display = "block";
+      }
+      
+      
+    c('close')[0].onclick = function() {
+          d('contactModal').style.display = "none";
+      }
+      
+      
+    window.onclick = function(event) {
+        if (event.target == d('contactModal')) {
+          d('contactModal').style.display = "none";
+        }
+      }
