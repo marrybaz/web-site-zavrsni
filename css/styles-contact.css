@@ -98,4 +98,8 @@
     cursor: pointer;
   }
   
+  #captchaInput {
+    width: 2.5rem;
+    margin-left: .5rem;
+  }
 

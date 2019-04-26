@@ -78,27 +78,45 @@ for (var i = 0; i < infos.length; i++) {
 }
 
 $(".info-rotate")
-    .mouseover(function () {        
+    .mouseover(function () {
         $("#info-" + this.id).removeClass("info-hidden").addClass("info-visible");
     })
-    .mouseleave(function () {        
+    .mouseleave(function () {
         $("#info-" + this.id).removeClass("info-visible").addClass("info-hidden");
     });
 
 //open contact modal
 
-    d('contact-btn').onclick = function() {
-        d('contactModal').style.display = "block";
-      }
-      
-      
-    c('close')[0].onclick = function() {
-          d('contactModal').style.display = "none";
-      }
-      
-      
-    window.onclick = function(event) {
-        if (event.target == d('contactModal')) {
-          d('contactModal').style.display = "none";
+d('contact-btn').onclick = function () {
+    if (d('name').value !== '') {
+        // name already filled ask if another message should be sent
+        if (confirm("Poruku ste već poslali. Da li želite da pošaljete novu poruku?")) {
+            d('message').value = '';
+            d('contact-modal').style.display = "block";            
         }
-      }
+    } else {
+        // no name enetered in form, open form
+        d('contact-modal').style.display = "block";
+
+    }
+}
+
+
+c('close')[0].onclick = function () {
+    d('contact-modal').style.display = "none";
+}
+
+
+window.onclick = function (event) {
+    if (event.target == d('contact-modal')) {
+        d('contact-modal').style.display = "none";
+    }
+}
+
+$('#contact-form').submit(function (e) {
+    e.preventDefault();
+    this.submit();
+    $('#contact-modal').hide();
+});
+
+$('#contact-form').captcha();

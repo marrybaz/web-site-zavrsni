@@ -54,6 +54,44 @@ p{
     width: 60%;
 }
 
+.medium-heading{
+    color: #488b8f;
+    font-size: 2rem;
+}
+
+.small-heading{
+    color: #488b8f;
+    font-size: 1.5rem;
+}
+
+.text{
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.intro{
+    text-align: center;
+}
+
+.njivica {
+    margin: 100px auto;
+    text-align: left;
+    padding:0 100px;
+    /* overflow: hidden; */
+}
+
+.us-img {
+    width: 25%;
+    float: left;
+    margin-right: 30px;
+}
+
+.garden-img {
+    width: 25%;
+    float: right;
+    margin-left: 30px;
+    
+}
 /* Features */
 
 #products{
@@ -99,7 +137,7 @@ p{
     color: lightblue;
     cursor: pointer;
     transform: rotate(0deg);  
-    transition-duration: 2s; 
+    transition-duration: 1s; 
 }
 
 .info-hidden{
@@ -128,7 +166,7 @@ p{
 }
 
 .wrapper{
-    padding: 7% 15% 12%;
+    padding: 7% 15% 10%;
 }
 
 .drzac { 
