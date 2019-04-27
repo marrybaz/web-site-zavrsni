@@ -72,10 +72,7 @@ document.body.addEventListener('keydown', function (event) {
 function getInfo(e) {
     console.log(e);
 }
-let infos = c('info');
-for (var i = 0; i < infos.length; i++) {
-    infos[i].addEventListener('click', getInfo);
-}
+
 
 $(".info-rotate")
     .mouseover(function () {
@@ -85,6 +82,50 @@ $(".info-rotate")
         $("#info-" + this.id).removeClass("info-visible").addClass("info-hidden");
     });
 
+// products modal
+let s = (state, product = '', url = '') => {
+    if (url !== '') {
+        // fetchuj sa url-a
+        fetch(url)
+        .then(response => response.json())
+        .then(podatak => {
+            const pages = podatak.query.pages;
+            const clanak = (Object.values(pages)[0]);//pretvara vrednosti objekta u niz
+            const imgSrc = clanak.thumbnail ? clanak.thumbnail.source : '';
+            
+            // d('product-title').innerHTML += `<img src="${imgSrc}" alt="${clanak.title}">`
+            d('product-title').innerHTML += clanak.extract.substring(0,1000) + ' [...]';
+            d('product-title').innerHTML +=`<a href="${clanak.fullurl}" target="_blаnk">Pročitaj više</a>`;
+
+        })
+        // podesi sadrzaj
+        d('product-title').innerHTML = product;
+    }
+    d('product-modal').style.display = state;
+    d('overlay').style.display = state;
+    if (state === 'block') {
+        d('content').classList.add('blurred');
+    } else {
+        d('content').classList.remove('blurred');
+    }
+}
+
+d('close').addEventListener('click', function () {
+    s('none');
+});
+
+
+d('overlay').addEventListener('click', function (event) {
+    s('none');
+})
+
+let infos = c('info');
+for (let i = 0; i < infos.length; i++) {
+    infos[i].addEventListener('click', function (e) {
+        s('block', e.target.dataset.product, e.target.dataset.url);
+    });
+}
+
 //open contact modal
 
 d('contact-btn').onclick = function () {
@@ -92,7 +133,7 @@ d('contact-btn').onclick = function () {
         // name already filled ask if another message should be sent
         if (confirm("Poruku ste već poslali. Da li želite da pošaljete novu poruku?")) {
             d('message').value = '';
-            d('contact-modal').style.display = "block";            
+            d('contact-modal').style.display = "block";
         }
     } else {
         // no name enetered in form, open form

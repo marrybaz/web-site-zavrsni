@@ -103,3 +103,8 @@
     margin-left: .5rem;
   }
 
+  #captchaText {
+    color: #add2c9;
+    font-weight: bold;
+  }
+
