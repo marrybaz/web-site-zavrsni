@@ -2,19 +2,26 @@
     display: none; 
     position: fixed; 
     z-index: 20; 
-    padding: 10px; 
+    padding: 3%; 
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 480px; 
-    height: 240px; 
+    width: 60%; 
+    height: 60%; 
     overflow: auto;
-    background-color: yellow;
+    background-color: #faf9f9;
     margin: 0 auto;
-    text-align: center;
+    text-align: justify;
     border-radius: 5px;
+      }
+
+#product-info{
+  color: #8f8f8f;
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 400;
   }
-  
+
   #close {
     color: #aaa;
     float: right;
@@ -42,5 +49,17 @@
   }
   
   .blurred {
-    filter: blur(2px);
+    filter: blur(4px);
+  }
+
+  .zoom {
+    padding: 10px;    
+    transition: transform 0.4s; 
+    height: 75px;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    transform: scale(2.5) translateX(20px); 
+    /* padding-left: 37px; */
   }

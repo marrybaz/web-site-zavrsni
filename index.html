@@ -18,15 +18,12 @@
   <!-- css stylesheets -->
   <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/bootstrap.css" />
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/styles-resp.css">
   <link rel="stylesheet" href="css/styles-products.css">
   <link rel="stylesheet" href="css/styles-contact.css">
+  <link rel="stylesheet" href="css/styles-resp.css">
 
   <!-- bootstrap scripts -->
   <script src="bootstrap/jquery.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
   <script src="bootstrap/bootstrap.js"></script>
   <script src="js/jquery.captcha.basic.min.js"></script>
 
@@ -62,7 +59,7 @@
                 <a class="nav-link" href="#about-us">O nama</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#pricing">Proizvodi</a>
+                <a class="nav-link" href="#products">Proizvodi</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#contact-btn">Kontakt</a>
@@ -74,15 +71,20 @@
 
       <!-- Title -->
       <div class="container-fluid title">
-        <h1 class="big-heading">Voce i povrce, okupano suncem, uzgajano s ljubavlju.</h1>
+        <h1 class="big-heading">Voće i povrće, okupano suncem, uzgajano s ljubavlju.</h1>
+        <a id="scroll-down" title="Skrolujte" href="#about-us"><i class="fas fa-chevron-down"></i></a>
       </div>
-
+      <div>
+          <a id="about-nav" class="sticky-nav" title="O nama" href="#about-us"><i class="fas fa-home"></i></a>
+          <a id="product-nav" class="sticky-nav" title="Proizvodi" href="#products"><i class="fas fa-pepper-hot"></i></a>
+          <a id="contact-nav" class="sticky-nav" title="Kontakt" href="#contact-btn"><i class="far fa-address-card"></i></a>
+      </div>
       <div id="about-us" class="intro wrapper">
-        <h2 class="medium-heading">Ponesto o nama</h2>
+        <h2 class="medium-heading">Ponešto o nama</h2>
 
         <div class="njivica">
           <img class="garden-img" src="images/njiva.jpg" alt="farm-image">
-          <h3 class="small-heading">Nasa njivica</h3>
+          <h3 class="small-heading">Naša njivica</h3>
           <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi molestias ex ipsum amet
             laudantium impedit. Tempore dolorum alias eveniet doloremque est repudiandae similique, labore modi qui ea
             dolorem maiores! Expedita! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi molestias ex
@@ -108,29 +110,32 @@
 
     <!-- products -->
     <section id="products">
+      <div class="wrapper">
 
-      <h3>Nasi proizvodi</h3>
+        <h3>Nasi proizvodi</h3>
 
 
       <div class="grid-cont">
         <div id="paprika" class="grid-item large info-rotate"><img src="images/paprika.jpg" alt="paprika-image">
-          <i id="info-paprika" data-product="Paprika" data-url="wikipedia.com/paprika"  class="info fas fa-info-circle info-hidden"></i>
+          <i id="info-paprika" data-product="Paprika" data-url="https://sr.wikipedia.org/w/api.php?action=query&titles=Паприка&prop=extracts|pageimages|info&pithumbsize=400&inprop=url&redirects=&format=json&origin=*"  class="info fas fa-info-circle info-hidden"></i>
         </div>
         <div id="patlidzan" class="grid-item large info-rotate"><img src="images/patlidzan.jpg" alt="patlidzan-image">
-          <i id="info-patlidzan" data-product="Patlidžan" data-url="wikipedia.com/aaaaa" class="info fas fa-info-circle info-hidden"></i>
+          <i id="info-patlidzan" data-product="Patlidžan" data-url="https://sr.wikipedia.org/w/api.php?action=query&titles=Плави_патлиџан&prop=extracts|pageimages|info&pithumbsize=400&inprop=url&redirects=&format=json&origin=*" class="info fas fa-info-circle info-hidden"></i>
         </div>
         <div id="paradajz" class="grid-item vertical info-rotate"><img src="images/paradajz.jpg" alt="paradajz-image">
-          <i id="info-paradajz" data-product="Paradajz" data-url="wikipedia.com/bbbb" class="info fas fa-info-circle info-hidden"></i>
+          <i id="info-paradajz" data-product="Paradajz" data-url="https://sr.wikipedia.org/w/api.php?action=query&titles=Парадајз&prop=extracts|pageimages|info&pithumbsize=400&inprop=url&redirects=&format=json&origin=*" class="info fas fa-info-circle info-hidden"></i>
         </div>
         <div id="jagode" class="grid-item horizontal info-rotate"><img src="images/jagode.jpg" alt="jagode-image">
-          <i id="info-jagode" data-product="Jagoda" data-url="https://sr.wikipedia.org/w/api.php?action=query&titles=%D0%88%D0%B0%D0%B3%D0%BE%D0%B4%D0%B0&prop=extracts|pageimages|info&pithumbsize=400&inprop=url&redirects=&format=json&origin=*" class="info fas fa-info-circle info-hidden"></i>
+          <i id="info-jagode" data-product="Jagoda" data-url="https://sr.wikipedia.org/w/api.php?action=query&titles=Јагода&prop=extracts|pageimages|info&pithumbsize=400&inprop=url&redirects=&format=json&origin=*" class="info fas fa-info-circle info-hidden"></i>
         </div>
         <div id="maline" class="grid-item horizontal info-rotate"><img src="images/maline.jpg" alt="maline-image">
-          <i id="info-maline" data-product="Malina" data-url="wikipedia.com/paprika" class="info fas fa-info-circle info-hidden"></i>
+          <i id="info-maline" data-product="Malina" data-url="https://sr.wikipedia.org/w/api.php?action=query&titles=Малина&prop=extracts|pageimages|info&pithumbsize=400&inprop=url&redirects=&format=json&origin=*" class="info fas fa-info-circle info-hidden"></i>
         </div>
         <div id="kupine" class="grid-item vertical info-rotate"><img src="images/kupine.jpg" alt="kupine-image">
-          <i id="info-kupine" data-product="Kupina" data-url="wikipedia.com/paprika" class="info fas fa-info-circle info-hidden"></i>
+          <i id="info-kupine" data-product="Kupina" data-url="https://sr.wikipedia.org/w/api.php?action=query&titles=Купина&prop=extracts|pageimages|info&pithumbsize=400&inprop=url&redirects=&format=json&origin=*" class="info fas fa-info-circle info-hidden"></i>
         </div>
+      </div>
+
       </div>
 
     </section>
@@ -139,7 +144,7 @@
     <!-- products slider -->
     <section id="products-slider">
 
-      <div class="container-fluid wrapper">
+      <div class="wrapper">
         <div class="drzac">
           <div accesskey="n" id="desno" class="desno"><i class="fas fa-arrow-circle-right prev-next-button"></i></div>
           <div accesskey="p" id="levo" class="levo"><i class="fas fa-arrow-circle-left prev-next-button"></i></div>
@@ -171,6 +176,11 @@
             </ul>
 
             <button id="contact-btn">Kontaktirajte nas</button>
+
+            <div class="social-media">
+                <span><i class="fab fa-facebook-f fa-2x"></i></span>
+                <span><i class="fab fa-instagram fa-2x"></i></span>
+            </div>
           </div>
 
           <div class="map col-md-8">
@@ -233,13 +243,15 @@
   <!-- Footer -->
 
   <footer id="footer">
-    <span><i class="fab fa-facebook-f fa-2x"></i></span>
-    <span><i class="fab fa-instagram fa-2x"></i></span>
-    <p>© Copyright 2019</p>
+    
+    Njivica © 2019
 
   </footer>
 
   <script src="js/main.js"></script>
+
+  <a id="back-2-top" title="Nazad na vrh" href="#"><i class="fas fa-chevron-up"></i></a>
+  
 </body>
 
 </html>

@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Montserrat', sans-serif;
 }
@@ -42,16 +45,24 @@ p{
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
-    margin-bottom: 8%;
+    /* margin-bottom: 8%; */
     padding-top: 200px;
     text-align: center;
 }
 
-.big-heading{
+
+.big-heading{    
     color: #faf9f9;
     font-size: 3.5rem;
     margin: 0 auto;
     width: 60%;
+    animation: fadein 4s;
+}
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 .medium-heading{
@@ -64,9 +75,64 @@ p{
     font-size: 1.5rem;
 }
 
+#scroll-down {
+    width: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    z-index: 999;
+    display: block;
+    cursor: pointer;    
+    position: fixed;
+    bottom: 30px;
+    right: 50%;
+    /* background-color: #488b8f; */
+    color: whitesmoke;
+    text-align: center;
+    font-size: 40px;
+    text-decoration: none;    
+}
+#scroll-down:hover {
+    color: #8f8f8f;
+}
+
+.sticky-nav {
+    width: 50px;
+    line-height: 40px;
+    overflow: hidden;
+    z-index: 999;
+    display: none;
+    cursor: pointer;    
+    position: fixed;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 40px;
+    text-decoration: none;    
+    left: 30px;    
+}
+
+#about-nav {
+    top:30px;    
+}
+
+#product-nav {
+    top: 80px;
+}
+
+#contact-nav {
+    top: 130px;
+}
+
+.sticky-nav:hover {
+    color: #8f8f8f;
+}
+
 .text{
     font-size: 1rem;
     line-height: 2;
+}
+
+.wrapper{
+    padding: 7% 15%;
 }
 
 .intro{
@@ -76,7 +142,7 @@ p{
 .njivica {
     margin: 100px auto;
     text-align: left;
-    padding:0 100px;
+    /* padding:0 100px; */
     /* overflow: hidden; */
 }
 
@@ -97,7 +163,7 @@ p{
 #products{
     background-color: #add2c9;
     position: relative;
-    padding: 7% 15%;
+    /* padding: 7% 15%; */
 }
 
 #products h3{
@@ -134,7 +200,7 @@ p{
 
 .info-visible{
     opacity: 1;
-    color: lightblue;
+    color: #5599ff;
     cursor: pointer;
     transform: rotate(0deg);  
     transition-duration: 1s; 
@@ -163,10 +229,6 @@ p{
     text-align: center;
     background-color: #faf9f9;
     color: #488b8f;
-}
-
-.wrapper{
-    padding: 7% 15% 10%;
 }
 
 .drzac { 
@@ -239,16 +301,33 @@ p{
     font-weight: bold;
 }
 
-/* Pricing */
-#pricing{
-    padding: 7% 15%;
-}
-
-.pricing-col{
-    padding: 3% 2%;
-    text-align: center;
-}
-
 #footer {
+    background-color:#faf9f9;
     text-align: center;
+    color:#8f8f8f;
+    font-size: 0.8rem;
 }
+
+
+/* back 2 top */
+#back-2-top {
+    width: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    z-index: 999;
+    display: none;
+    cursor: pointer;    
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    background-color: #488b8f;
+    color: #8f8f8f;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+}
+#back-2-top:hover {
+    background-color: #dddddd;
+    color: #000;
+}
+

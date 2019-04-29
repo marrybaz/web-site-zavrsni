@@ -86,6 +86,7 @@ $(".info-rotate")
 let s = (state, product = '', url = '') => {
     if (url !== '') {
         // fetchuj sa url-a
+        d('product-title').innerHTML = product;
         fetch(url)
         .then(response => response.json())
         .then(podatak => {
@@ -93,13 +94,12 @@ let s = (state, product = '', url = '') => {
             const clanak = (Object.values(pages)[0]);//pretvara vrednosti objekta u niz
             const imgSrc = clanak.thumbnail ? clanak.thumbnail.source : '';
             
-            // d('product-title').innerHTML += `<img src="${imgSrc}" alt="${clanak.title}">`
-            d('product-title').innerHTML += clanak.extract.substring(0,1000) + ' [...]';
-            d('product-title').innerHTML +=`<a href="${clanak.fullurl}" target="_blаnk">Pročitaj više</a>`;
+            d('product-title').innerHTML += `<img class="zoom" src="${imgSrc}" alt="${clanak.title}">`
+            d('product-info').innerHTML = clanak.extract.substring(0,1000) + ' [...]';
+            d('product-info').innerHTML +=`<a href="${clanak.fullurl}" target="_blаnk">Pročitaj više</a>`;
 
-        })
-        // podesi sadrzaj
-        d('product-title').innerHTML = product;
+        })        
+        
     }
     d('product-modal').style.display = state;
     d('overlay').style.display = state;
@@ -113,7 +113,6 @@ let s = (state, product = '', url = '') => {
 d('close').addEventListener('click', function () {
     s('none');
 });
-
 
 d('overlay').addEventListener('click', function (event) {
     s('none');
@@ -161,3 +160,18 @@ $('#contact-form').submit(function (e) {
 });
 
 $('#contact-form').captcha();
+
+/* scrool down and to top visibility*/
+$(window).scroll(function() {
+    var height = $(window).scrollTop();
+    if (height > 50) {
+        $('#back-2-top').fadeIn();
+        $('#about-nav, #product-nav, #contact-nav').fadeIn();        
+        $('#scroll-down').fadeOut();
+    } else {
+        $('#scroll-down').fadeIn();
+        $('#back-2-top').fadeOut();
+        $('#about-nav, #product-nav, #contact-nav').fadeOut();
+    }
+});
+
