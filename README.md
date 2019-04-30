@@ -1,4 +1,4 @@
-#Zavrsni rad - Web site
+# Zavrsni rad - Web site
 
 Ovaj Web sajt namenjen je malim poljoprivrednim proizvođačima, stoga ovaj sajt nema više stranica i malog je obima.
 Sastoji se iz nekoliko celina, a to su:
