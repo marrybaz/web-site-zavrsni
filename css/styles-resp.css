@@ -1,12 +1,83 @@
+@media screen and (max-width: 991px){
+    .big-heading{
+        width: 80%;
+        font-size: 2rem;
+    }
+
+    .njivica {
+        margin: 200px auto 0;
+        text-align: left;
+        overflow: hidden;
+    }
+
+    .us-img {
+        width: 50%;
+        float: left;
+        margin-right: 30px;
+    }
+
+    .garden-img {
+        width: 50%;
+        float: right;
+        margin-left: 30px;
+    }
+
+    .contact-item{
+        font-size: 1.2rem;
+    }
+
+    .modal-content {
+        width: 50%;
+      }
+       
+}
+
+@media screen and (max-width: 767px){
+    .grid-cont {
+        /* display: block; */
+        grid-template-columns: auto auto;
+        grid-row-gap: 5px;
+    }
+    
+    .horizontal, .large, .vertical {
+        grid-column: span 1;        
+        grid-row: span 1;        
+    }
+
+    #product-modal{
+        width: 70%; 
+        height: 70%; 
+    }
+
+    #komentar {
+        opacity: 1;
+        bottom: -50px;
+        left: 100px;
+        right: 50px;
+    }
+
+    .start{
+        bottom: -50px;
+        left: 50px;
+        font-size:30px;
+    }
+    
+    .modal-content {
+        width: 60%;
+      }
+}
+
+
 /* small screen css */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 599px) {
     .horizontal, .large, .vertical {
         grid-column: span 1;        
         grid-row: span 1;        
     }
     .grid-cont {
-        display: block;
+        /* display: block; */
         grid-template-columns: auto;
+        grid-row-gap: 5px;
     }
     .big-heading{
         width: 80%;

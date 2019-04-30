@@ -95,8 +95,8 @@ let s = (state, product = '', url = '') => {
             const imgSrc = clanak.thumbnail ? clanak.thumbnail.source : '';
             
             d('product-title').innerHTML += `<img class="zoom" src="${imgSrc}" alt="${clanak.title}">`
-            d('product-info').innerHTML = clanak.extract.substring(0,1000) + ' [...]';
-            d('product-info').innerHTML +=`<a href="${clanak.fullurl}" target="_blаnk">Pročitaj više</a>`;
+            d('product-info').innerHTML = clanak.extract.substring(0,1000) + ' <span class="continue"> [...]</span>';
+            d('product-info').innerHTML +=`<a href="${clanak.fullurl}" target="_blаnk">Otvori na wiki u novom prozoru</a>`;
 
         })        
         

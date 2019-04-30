@@ -1,3 +1,95 @@
+#products{
+  background-color: #add2c9;
+  position: relative;
+  /* padding: 7% 15%; */
+}
+
+.products h2{
+  color: #faf9f9;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.products h3{
+  color: #faf9f9;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.products p{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.slider h3{
+  color: #488b8f;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.slider p{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.grid-cont {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 300px;
+  grid-auto-flow: dense;  /*popunjava rupe*/
+  grid-gap: 5px;
+}
+
+.grid-cont img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;/*prilagodi sliku celiji*/
+}
+
+.grid-item {
+  position: relative;
+}
+
+.vertical {
+  grid-row: span 2;
+}
+
+.horizontal {
+  grid-column: span 2;
+}
+
+.large {
+  grid-row: span 2;
+  grid-column: span 2;     
+}
+
+  .info{
+  color: white;   
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+  font-size: 3rem;
+}
+
+.info-visible{
+  opacity: 1;
+  color: #5599ff;
+  cursor: pointer;
+  transform: rotate(0deg);  
+  transition-duration: 1s; 
+}
+
+.info-hidden{
+  opacity: 0;
+}
+
+.continue {
+  font-size: 1rem;
+  font-weight: 400;
+  color: black;
+}
+
   #product-modal{
     display: none; 
     position: fixed; 
@@ -15,7 +107,7 @@
     border-radius: 5px;
       }
 
-#product-info{
+  #product-info{
   color: #8f8f8f;
   line-height: 1.5;
   font-size: 1rem;
@@ -35,8 +127,7 @@
     text-decoration: none;
     cursor: pointer;
   }
-  
-  
+    
   #overlay{
     display: none;
     position: absolute;
