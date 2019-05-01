@@ -96,18 +96,18 @@ let s = (state, product = '', url = '') => {
         // fetchuj sa url-a
         d('product-title').innerHTML = product;
         fetch(url)
-        .then(response => response.json())
-        .then(podatak => {
-            const pages = podatak.query.pages;
-            const clanak = (Object.values(pages)[0]);//pretvara vrednosti objekta u niz
-            const imgSrc = clanak.thumbnail ? clanak.thumbnail.source : '';
-            
-            d('product-title').innerHTML += `<img class="zoom" src="${imgSrc}" alt="${clanak.title}">`
-            d('product-info').innerHTML = clanak.extract.substring(0,1000) + ' <span class="continue"> [...]</span>';
-            d('product-info').innerHTML +=`<a href="${clanak.fullurl}" target="_blаnk">Otvori na wiki u novom prozoru</a>`;
+            .then(response => response.json())
+            .then(podatak => {
+                const pages = podatak.query.pages;
+                const clanak = (Object.values(pages)[0]);//pretvara vrednosti objekta u niz
+                const imgSrc = clanak.thumbnail ? clanak.thumbnail.source : '';
 
-        })        
-        
+                d('product-title').innerHTML += `<img class="zoom" src="${imgSrc}" alt="${clanak.title}">`
+                d('product-info').innerHTML = clanak.extract.substring(0, 1000) + ' <span class="continue"> [...]</span>';
+                d('product-info').innerHTML += `<a href="${clanak.fullurl}" target="_blаnk">Otvori na wiki u novom prozoru</a>`;
+
+            })
+
     }
     d('product-modal').style.display = state;
     d('overlay').style.display = state;
@@ -136,7 +136,7 @@ for (let i = 0; i < infos.length; i++) {
 
 /**
  *  Contact
- */ 
+ */
 
 d('contact-btn').onclick = function () {
     if (d('name').value !== '') {
@@ -174,13 +174,13 @@ $('#contact-form').captcha();
 
 /**
  * Navigation
- */ 
+ */
 
- $(window).scroll(function() {
+$(window).scroll(function () {
     var height = $(window).scrollTop();
     if (height > 50) {
         $('#back-2-top').fadeIn();
-        $('#about-nav, #product-nav, #contact-nav').fadeIn();        
+        $('#about-nav, #product-nav, #contact-nav').fadeIn();
         $('#scroll-down').fadeOut();
     } else {
         $('#scroll-down').fadeIn();
@@ -209,4 +209,41 @@ let njivicaIcon = L.icon({
     popupAnchor: [5, -15] // point from which the popup should open relative to the iconAnchor
 });
 
-L.marker([44.453857, 20.607235], {icon: njivicaIcon}).bindPopup("Njivica okupana kosmajskim suncem.").addTo(map);
+L.marker([44.453857, 20.607235], { icon: njivicaIcon }).bindPopup("Njivica okupana kosmajskim suncem.").addTo(map);
+
+/**
+ * Geolocation
+ */
+
+d('direction').addEventListener('click', function (e) {
+    getLocation();
+});
+
+function openPosition(position) {
+    let link = '';
+    if (position) {
+        link = 'https://maps.google.com/?saddr=' + position.coords.latitude + ',' + position.coords.longitude + '&daddr=44.453857, 20.60723';
+    } else {
+        link = 'https://maps.google.com/?daddr=44.453857, 20.60723';
+    }
+    window.open(link, '_blank');
+}
+
+function openDirection(err) {
+    window.open('https://maps.google.com/?daddr=44.453857, 20.60723', '_blank');
+}
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            openPosition,
+            openDirection,
+            {
+                enableHighAccuracy: true,
+                timeout: 5000,
+                maximumAge: 0
+            });
+    } else {
+        console.log('Geolokacija nije podržana');
+    }
+}
