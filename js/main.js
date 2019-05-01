@@ -36,7 +36,7 @@ function sledeci() {
         index = 0;
     }
     d('img-placeholder').src = niz[index];
-    d('sadrzaj').innerHTML = tekst[index];
+    d('img-desc').innerHTML = tekst[index];
 };
 
 function prethodni() {
@@ -244,6 +244,6 @@ function getLocation() {
                 maximumAge: 0
             });
     } else {
-        console.log('Geolokacija nije podržana');
+        alert('Geolokacija nije podržana');
     }
 }
