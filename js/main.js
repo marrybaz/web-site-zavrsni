@@ -1,6 +1,11 @@
 let d = id => document.getElementById(id);
 let c = className => document.getElementsByClassName(className);
 
+/**
+ * Slider
+ */
+
+// init data
 let intervalId;
 let niz = [
     "images/ajvar.jpg",
@@ -11,26 +16,26 @@ let niz = [
     "images/zele.jpg"
 ];
 let tekst = [
-    "Domaci ajvar od pecenih paprika",
-    "Kuvani paradajz sa zacinskim biljem",
-    "Slatko po receptima nasih baka",
-    "Dzem od naseg voca",
+    "Domaći ajvar od pečenih paprika",
+    "Kuvani paradajz sa zaćinskim biljem",
+    "Slatko po receptima naših baka",
+    "Džem od našeg voća",
     "Slatko od kupina za dobro jutro",
-    "Zele do raznog voca za svaciji ukus"
+    "Žele do raznog voća za svačiji ukus"
 ];
 
-//inicijalizacija podataka
-d('slika').src = niz[0];
-d('sadrzaj').innerHTML = tekst[0];
+d('img-placeholder').src = niz[0];
+d('img-desc').innerHTML = tekst[0];
 let index = 0;
 
+// methods
 function sledeci() {
 
     index++;
     if (index == niz.length) {
         index = 0;
     }
-    d('slika').src = niz[index];
+    d('img-placeholder').src = niz[index];
     d('sadrzaj').innerHTML = tekst[index];
 };
 
@@ -39,12 +44,15 @@ function prethodni() {
     if (index < 0) {
         index = niz.length - 1;
     }
-    d('slika').src = niz[index];
-    d('sadrzaj').innerHTML = tekst[index];
+    d('img-placeholder').src = niz[index];
+    d('img-desc').innerHTML = tekst[index];
 };
 
-d('desno').addEventListener('click', sledeci);
-d('levo').addEventListener('click', prethodni);
+// events
+d('img-right').addEventListener('click', sledeci);
+d('img-left').addEventListener('click', prethodni);
+d('img-container').addEventListener('swiped-right', sledeci);
+d('img-container').addEventListener('swiped-left', prethodni);
 d('start-stop').addEventListener('click', toggleInterval)
 
 function toggleInterval() {
@@ -69,10 +77,10 @@ document.body.addEventListener('keydown', function (event) {
 
 });
 
-function getInfo(e) {
-    console.log(e);
-}
 
+/**
+ * Products 
+ */
 
 $(".info-rotate")
     .mouseover(function () {
@@ -125,7 +133,10 @@ for (let i = 0; i < infos.length; i++) {
     });
 }
 
-//open contact modal
+
+/**
+ *  Contact
+ */ 
 
 d('contact-btn').onclick = function () {
     if (d('name').value !== '') {
@@ -161,8 +172,11 @@ $('#contact-form').submit(function (e) {
 
 $('#contact-form').captcha();
 
-/* scrool down and to top visibility*/
-$(window).scroll(function() {
+/**
+ * Navigation
+ */ 
+
+ $(window).scroll(function() {
     var height = $(window).scrollTop();
     if (height > 50) {
         $('#back-2-top').fadeIn();
@@ -175,7 +189,10 @@ $(window).scroll(function() {
     }
 });
 
-/* map */
+/**
+ * Map
+ */
+
 let map = L.map('map').setView([44.453857, 20.607235], 15);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

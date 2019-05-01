@@ -49,7 +49,7 @@
         height: 70%; 
     }
 
-    #komentar {
+    #img-comment {
         opacity: 1;
         bottom: -50px;
         left: 100px;
@@ -70,38 +70,108 @@
 
 /* small screen css */
 @media only screen and (max-width: 599px) {
-    .horizontal, .large, .vertical {
-        grid-column: span 1;        
-        grid-row: span 1;        
+    html {
+        font-size: 12px;
     }
-    .grid-cont {
-        /* display: block; */
-        grid-template-columns: auto;
-        grid-row-gap: 5px;
-    }
-    .big-heading{
-        width: 80%;
-        font-size: 2rem;
-        font-weight: 700;
-        line-height: 1.5;
-    }
-  
-    .logo{
-        width: 5rem;
-    }    
+    
     .img-logo{
         height: 54px;
         width: 100px;
         background-image:url('../images/logoside.png');
         background-size:cover;
         background-position:center;        
-
     }   
 
+    .title{
+        padding-top: 100px;
+    }
+
+    .big-heading{
+        width: 90%;
+        line-height: 1.5;
+    }
+
+    .njivica {
+        margin: 50px auto 0;
+        text-align: left;
+    }
+
+    .garden-img {
+        width: 100%;
+        float: none;
+        margin: 20px auto;
+    }
     
+    .us-img {
+        width: 100%;
+        float: none;
+        margin: 20px auto;
+    }
+
+    .products h3{
+        margin-bottom: 20px;
+    }
+
+    .products p, .slider p{
+        text-indent:0;
+    }
+
+    #product-modal{
+        width: 90%; 
+        height: 90%; 
+    }
+
+    .horizontal, .large, .vertical {
+        grid-column: span 1;        
+        grid-row: span 1;        
+    }
+
+    .grid-cont {
+        grid-template-columns: auto;
+        grid-row-gap: 5px;
+    }
+    
+    .info-hidden{
+        opacity: 1;
+        color: #5599ff;
+        cursor: pointer;
+        transform: rotate(0deg); 
+    }
+
+    #img-desc{
+        margin-left: 0;
+    }
+
+    #img-comment {
+        opacity: 1;
+        bottom: -50px;
+        left: 35px;
+        right: 5px;
+    }
+
+    .start{
+        bottom: -50px;
+        left: 0;
+        font-size:30px;
+    }
+
+    .img-slide{
+        width: 3rem;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    #contact-btn {
+        margin: 1rem auto;
+    }
+
 }
 
 /* medium screen css */
-@media only screen and (min-width: 500px) and (max-width: 1024px) {
-    
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    html {
+        font-size: 14px;
+    }
 }

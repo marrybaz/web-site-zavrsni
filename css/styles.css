@@ -14,6 +14,10 @@ p{
     color: #8f8f8f;
 }
 
+.wrapper{
+    padding: 7% 15%;
+}
+
 /* Navbar */
 
 .logo{
@@ -36,7 +40,7 @@ p{
     background-position:center;
 }
 
-/* Content below navbar */
+/* Heading page */
 
 .title{
     height: 100vh;
@@ -72,6 +76,8 @@ p{
     font-size: 1.5rem;
 }
 
+/* sticky navigation icons */
+
 #scroll-down {
     width: 40px;
     line-height: 40px;
@@ -82,6 +88,7 @@ p{
     position: fixed;
     bottom: 30px;
     right: 50%;
+    transform:translateX(50%);
     color: whitesmoke;
     text-align: center;
     font-size: 40px;
@@ -93,18 +100,24 @@ p{
 }
 
 .sticky-nav {
-    width: 50px;
-    line-height: 40px;
+    width: 55px;
+    line-height: 3.5rem;
     overflow: hidden;
     z-index: 999;
     display: none;
     cursor: pointer;    
     position: fixed;
-    color: whitesmoke;
+    color: black;
+    opacity: 0.3;
     text-align: center;
-    font-size: 40px;
+    font-size: 3rem;
     text-decoration: none;    
-    left: 30px;    
+    left: 1rem;    
+}
+
+.sticky-nav:hover {
+    color: black;
+    opacity: 0.6;
 }
 
 #about-nav {
@@ -119,15 +132,8 @@ p{
     top: 130px;
 }
 
-.sticky-nav:hover {
-    color: #8f8f8f;
-}
-
-.wrapper{
-    padding: 7% 15%;
-}
-
 /* About us */
+
 .intro{
     text-align: center;
 }
@@ -164,34 +170,30 @@ p{
     color: #488b8f;
 }
 
-.drzac { 
+#img-container { 
     margin: 0;
     padding: 0;
     position: relative;    
 }
 
-.levo{
-    width:70px;    
+.img-slide{
+    /* width:70px;     */
+    width: 4rem;    
     background-color: aliceblue;
     opacity: 0.3;
     height: 100%;
-    position:absolute;
-    left: 0%;
+    position:absolute;    
     font-size:30px;
     margin: 0;
     padding:0;
 }
 
-.desno{
-    background-color: aliceblue;
-    opacity: 0.3;
-    height: 100%;
-    width:70px;
-    position:absolute;
-    right: 0%;
-    font-size:30px;
-    margin: 0;
-    padding: 0;
+#img-right {
+    right: 0%
+}
+
+#img-left {
+    left: 0%
 }
 
 .start{
@@ -212,7 +214,7 @@ p{
     transform:translate(-50%, -50%);
 }
 
-#komentar {
+#img-comment {
     justify-content: center;
     height: 50px;
     background-color: #faf9f9;
@@ -224,7 +226,7 @@ p{
     padding: 0;
 }
 
-#sadrzaj {  
+#img-desc {  
     position: relative;  
     top: 50%;    
     left: 50%;

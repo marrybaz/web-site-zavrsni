@@ -3,56 +3,65 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Njivica</title>
+  <title>Njivica - domaće voće i povrće</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- seo optimization -->
   <meta name=”description” content=”Njivica - Prodaja zdravog voća i povrća sa Kosmaja.”>
-  <meta name=”robots” content=”index, follow”> 
+  <meta name=”robots” content=”index, follow”>
+  <!-- mobile optimization-->
   <meta name="theme-color" content="#add2c9">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#add2c9">
 
   <link rel=”canonical” href=”http://njivica.rs/” />
-  <!-- favicon -->
+  <!-- icons -->
   <link rel="shortcut icon" href="images/favicon.png" type="image/png">
-
+  <link rel="icon" sizes="120x81" href="images/logo-sm.png">
+  <link rel="apple-touch-icon" href="images/logo-sm.png">
+  <link rel="apple-touch-startup-image" href="images/logo.png">
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900|Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
   <!-- css stylesheets -->
   <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/bootstrap.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
-
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin="" />
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/styles-products.css">
   <link rel="stylesheet" href="css/styles-contact.css">
   <link rel="stylesheet" href="css/styles-resp.css">
-
   <!-- bootstrap scripts -->
   <script src="bootstrap/jquery.js"></script>
   <script src="bootstrap/bootstrap.js"></script>
-
   <!-- other third party scripts -->
   <script src="js/jquery.captcha.basic.min.js"></script>
-  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+    crossorigin=""></script>
+  <script src="js/swiped-events.js"></script>
 
 
 </head>
 
 <body>
 
+  <!-- blur layer -->
   <div id="overlay"></div>
 
+  <!-- product info window -->
   <div id="product-modal">
     <span id="close">&times;</span>
-    <h3 id="product-title"></h3>    
+    <h3 id="product-title"></h3>
     <div id="product-info"></div>
   </div>
 
   <div id="content">
 
-
     <section id="title">
       <div class="container">
+        <!-- menu -->
         <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand" href="">
             <div class="img-logo"></div>
@@ -81,24 +90,44 @@
         <h1 class="big-heading">Voće i povrće, okupano suncem, uzgajano s ljubavlju.</h1>
         <a id="scroll-down" title="Skrolujte" href="#about-us"><i class="fas fa-chevron-down"></i></a>
       </div>
+
+      <!-- sticky menu on left -->
       <div>
-          <a id="about-nav" class="sticky-nav" title="O nama" href="#about-us"><i class="fas fa-home"></i></a>
-          <a id="product-nav" class="sticky-nav" title="Proizvodi" href="#products"><i class="fas fa-pepper-hot"></i></a>
-          <a id="contact-nav" class="sticky-nav" title="Kontakt" href="#contact-btn"><i class="far fa-address-card"></i></a>
+        <a id="about-nav" class="sticky-nav" title="O nama" href="#about-us"><i class="fas fa-home"></i></a>
+        <a id="product-nav" class="sticky-nav" title="Proizvodi" href="#products"><i class="fas fa-pepper-hot"></i></a>
+        <a id="contact-nav" class="sticky-nav" title="Kontakt" href="#contact-btn"><i
+            class="far fa-address-card"></i></a>
       </div>
+
       <div id="about-us" class="intro wrapper">
         <h2 class="medium-heading">Ponešto o nama</h2>
 
         <div class="njivica">
-          <img class="garden-img" src="images/njiva.jpg" alt="farm-image">
           <h3 class="small-heading">Naša njivica</h3>
-          <p class="text">Naša njivica se nalazi na padinama planine Kosmaj, zauzima površinu taman dovoljnu da se pored posla kojim se bavimo u firmama u kojima smo zaposleni, bavimo poljoprivredom kao dodatim izvorom prihoda. Na ideju da se uopšte bavimo ovim smo došli kada smo mi, roditelji dvoje dece rešili da im obezbedimo zdravu ishranu, nezagađenu preteranom upotrebom hemikalija za tretiranje voća i povrća, koje smo do tada nabavljali na pijacama. Malo po malo postali smo veoma umešni u bavljenju baštovanstvom, pa smo posao proširili. Deca su porasla i postala ravnopravni partneri u poslu, a mi dobili mogućnost da veliki deo koji nam pretekne počnemo da prodajemo. Taj deo za prodaju je rastao, tako da smo odlučili da se reklamiramo i tako privučemo kupce. Svaki kupac, može lično doći da se uveri, kako izgleda i funkcioniše naše imanjce, da proba proizvode, samo nam se najavite. <strong>Svi ste dobrodošli !</strong></p>
+          <img class="garden-img" src="images/njiva.jpg" alt="farm-image">
+          <p class="text">Naša njivica se nalazi na padinama planine Kosmaj, zauzima površinu taman dovoljnu da se pored
+            posla kojim se bavimo u firmama u kojima smo zaposleni, bavimo poljoprivredom kao dodatim izvorom prihoda.
+            Na ideju da se uopšte bavimo ovim smo došli kada smo mi, roditelji dvoje dece rešili da im obezbedimo zdravu
+            ishranu, nezagađenu preteranom upotrebom hemikalija za tretiranje voća i povrća, koje smo do tada nabavljali
+            na pijacama. Malo po malo postali smo veoma umešni u bavljenju baštovanstvom, pa smo posao proširili. Deca
+            su porasla i postala ravnopravni partneri u poslu, a mi dobili mogućnost da veliki deo koji nam pretekne
+            počnemo da prodajemo. Taj deo za prodaju je rastao, tako da smo odlučili da se reklamiramo i tako privučemo
+            kupce. Svaki kupac, može lično doći da se uveri, kako izgleda i funkcioniše naše imanjce, da proba
+            proizvode, samo nam se najavite. <strong>Svi ste dobrodošli !</strong></p>
         </div>
 
         <div class="njivica">
-          <img class="us-img" src="images/ruke.jpeg" alt="fammily-image">
           <h3 class="small-heading">Vredne ruke</h3>
-          <p class="text"> Svaka mala zajednica, uspeva samo zahvaljujući dogovoru, razumevanju i usklađivanju obaveza, pa tako i naša porodica. Zahvaljujući tome sto potičemo iz porodica sa sela, imali smo nešto plodne zemlje u posedu i imali smo iskustva u bavljenju poljoprivrednim radovima. Trudili smo se da deci od najranije dobi usadimo ljubav prema zemlji i baštovanstvu, uključivali ih zajedno sa nama u poljoprivredene radove. Sada posle nekoliko godine, stekli smo ravnopravne partnere u obavljanju svih poslova. Odgovorno se bavimo ovim, što podrazumeva tretiranje proizvoda striktno po preporukama stručnjaka. Posedujemo i nešto poljoprivredne mehanizacije, koja nam znatno olakšava situaciju. U skorije vreme, napravili smo sebi prostora i za proizvodnju određene količine gotovih, domaćih proizvoda, isključivo od našeg voća i povrća. Recepte smo nasledili od naših starijih, pa vam toplo preporučujemo da ih probate.</p>
+          <img class="us-img" src="images/ruke.jpeg" alt="fammily-image">
+          <p class="text"> Svaka mala zajednica, uspeva samo zahvaljujući dogovoru, razumevanju i usklađivanju obaveza,
+            pa tako i naša porodica. Zahvaljujući tome sto potičemo iz porodica sa sela, imali smo nešto plodne zemlje u
+            posedu i imali smo iskustva u bavljenju poljoprivrednim radovima. Trudili smo se da deci od najranije dobi
+            usadimo ljubav prema zemlji i baštovanstvu, uključivali ih zajedno sa nama u poljoprivredene radove. Sada
+            posle nekoliko godine, stekli smo ravnopravne partnere u obavljanju svih poslova. Odgovorno se bavimo ovim,
+            što podrazumeva tretiranje proizvoda striktno po preporukama stručnjaka. Posedujemo i nešto poljoprivredne
+            mehanizacije, koja nam znatno olakšava situaciju. U skorije vreme, napravili smo sebi prostora i za
+            proizvodnju određene količine gotovih, domaćih proizvoda, isključivo od našeg voća i povrća. Recepte smo
+            nasledili od naših starijih, pa vam toplo preporučujemo da ih probate.</p>
         </div>
 
       </div>
@@ -114,28 +143,40 @@
         <h3>Sveži i neodoljivi</h3>
 
 
-      <div class="grid-cont">
-        <div id="paprika" class="grid-item large info-rotate"><img src="images/paprika.jpg" alt="paprika-image">
-          <i id="info-paprika" data-product="Paprika" data-url="https://sr.wikipedia.org/w/api.php?action=query&titles=Паприка&prop=extracts|pageimages|info&pithumbsize=400&inprop=url&redirects=&format=json&origin=*"  class="info fas fa-info-circle info-hidden"></i>
+        <div class="grid-cont">
+          <div id="paprika" class="grid-item large info-rotate"><img src="images/paprika.jpg" alt="paprika-image">
+            <i id="info-paprika" data-product="Paprika"
+              data-url="https://sr.wikipedia.org/w/api.php?action=query&titles=Паприка&prop=extracts|pageimages|info&pithumbsize=400&inprop=url&redirects=&format=json&origin=*"
+              class="info fas fa-info-circle info-hidden"></i>
+          </div>
+          <div id="patlidzan" class="grid-item large info-rotate"><img src="images/patlidzan.jpg" alt="patlidzan-image">
+            <i id="info-patlidzan" data-product="Patlidžan"
+              data-url="https://sr.wikipedia.org/w/api.php?action=query&titles=Плави_патлиџан&prop=extracts|pageimages|info&pithumbsize=400&inprop=url&redirects=&format=json&origin=*"
+              class="info fas fa-info-circle info-hidden"></i>
+          </div>
+          <div id="paradajz" class="grid-item vertical info-rotate"><img src="images/paradajz.jpg" alt="paradajz-image">
+            <i id="info-paradajz" data-product="Paradajz"
+              data-url="https://sr.wikipedia.org/w/api.php?action=query&titles=Парадајз&prop=extracts|pageimages|info&pithumbsize=400&inprop=url&redirects=&format=json&origin=*"
+              class="info fas fa-info-circle info-hidden"></i>
+          </div>
+          <div id="jagode" class="grid-item horizontal info-rotate"><img src="images/jagode.jpg" alt="jagode-image">
+            <i id="info-jagode" data-product="Jagoda"
+              data-url="https://sr.wikipedia.org/w/api.php?action=query&titles=Јагода&prop=extracts|pageimages|info&pithumbsize=400&inprop=url&redirects=&format=json&origin=*"
+              class="info fas fa-info-circle info-hidden"></i>
+          </div>
+          <div id="maline" class="grid-item horizontal info-rotate"><img src="images/maline.jpg" alt="maline-image">
+            <i id="info-maline" data-product="Malina"
+              data-url="https://sr.wikipedia.org/w/api.php?action=query&titles=Малина&prop=extracts|pageimages|info&pithumbsize=400&inprop=url&redirects=&format=json&origin=*"
+              class="info fas fa-info-circle info-hidden"></i>
+          </div>
+          <div id="kupine" class="grid-item vertical info-rotate"><img src="images/kupine.jpg" alt="kupine-image">
+            <i id="info-kupine" data-product="Kupina"
+              data-url="https://sr.wikipedia.org/w/api.php?action=query&titles=Купина&prop=extracts|pageimages|info&pithumbsize=400&inprop=url&redirects=&format=json&origin=*"
+              class="info fas fa-info-circle info-hidden"></i>
+          </div>
         </div>
-        <div id="patlidzan" class="grid-item large info-rotate"><img src="images/patlidzan.jpg" alt="patlidzan-image">
-          <i id="info-patlidzan" data-product="Patlidžan" data-url="https://sr.wikipedia.org/w/api.php?action=query&titles=Плави_патлиџан&prop=extracts|pageimages|info&pithumbsize=400&inprop=url&redirects=&format=json&origin=*" class="info fas fa-info-circle info-hidden"></i>
-        </div>
-        <div id="paradajz" class="grid-item vertical info-rotate"><img src="images/paradajz.jpg" alt="paradajz-image">
-          <i id="info-paradajz" data-product="Paradajz" data-url="https://sr.wikipedia.org/w/api.php?action=query&titles=Парадајз&prop=extracts|pageimages|info&pithumbsize=400&inprop=url&redirects=&format=json&origin=*" class="info fas fa-info-circle info-hidden"></i>
-        </div>
-        <div id="jagode" class="grid-item horizontal info-rotate"><img src="images/jagode.jpg" alt="jagode-image">
-          <i id="info-jagode" data-product="Jagoda" data-url="https://sr.wikipedia.org/w/api.php?action=query&titles=Јагода&prop=extracts|pageimages|info&pithumbsize=400&inprop=url&redirects=&format=json&origin=*" class="info fas fa-info-circle info-hidden"></i>
-        </div>
-        <div id="maline" class="grid-item horizontal info-rotate"><img src="images/maline.jpg" alt="maline-image">
-          <i id="info-maline" data-product="Malina" data-url="https://sr.wikipedia.org/w/api.php?action=query&titles=Малина&prop=extracts|pageimages|info&pithumbsize=400&inprop=url&redirects=&format=json&origin=*" class="info fas fa-info-circle info-hidden"></i>
-        </div>
-        <div id="kupine" class="grid-item vertical info-rotate"><img src="images/kupine.jpg" alt="kupine-image">
-          <i id="info-kupine" data-product="Kupina" data-url="https://sr.wikipedia.org/w/api.php?action=query&titles=Купина&prop=extracts|pageimages|info&pithumbsize=400&inprop=url&redirects=&format=json&origin=*" class="info fas fa-info-circle info-hidden"></i>
-        </div>
-      </div>
 
-      <p class="text">* Za informacije o cenama, količinama i svemu ostalom što vas zanima, kontaktirajte nas !</p>
+        <p class="text">* Za informacije o cenama, količinama i svemu ostalom što vas zanima, kontaktirajte nas !</p>
 
       </div>
 
@@ -147,19 +188,21 @@
 
       <div class="wrapper slider">
 
-          <h3>Gotovi proizvodi po receptima starih majstora</h3>
+        <h3>Gotovi proizvodi po receptima starih majstora</h3>
 
-        <div class="drzac">
-          <div accesskey="n" id="desno" class="desno"><i class="fas fa-arrow-circle-right prev-next-button"></i></div>
-          <div accesskey="p" id="levo" class="levo"><i class="fas fa-arrow-circle-left prev-next-button"></i></div>
-          <div accesskey="s" class="btn btn-default start"><i id="start-stop" class="fas fa-play-circle"></i></div>
-          <div id="komentar">
-            <div id="sadrzaj"></div>
+        <div id="img-container">
+          <div accesskey="n" id="img-right" class="img-slide"><i class="fas fa-arrow-circle-right prev-next-button"></i>
           </div>
-          <img class="img-fluid slika" id="slika" src="" alt="">
+          <div accesskey="p" id="img-left" class="img-slide"><i class="fas fa-arrow-circle-left prev-next-button"></i>
+          </div>
+          <div accesskey="s" class="btn btn-default start"><i id="start-stop" class="fas fa-play-circle"></i></div>
+          <div id="img-comment">
+            <div id="img-desc"></div>
+          </div>
+          <img class="img-fluid img-placeholder" id="img-placeholder" src="#" alt="Placeholder">
         </div>
 
-         <p class="text">* Za informacije o cenama, količinama i svemu ostalom što vas zanima, kontaktirajte nas !</p>
+        <p class="text">* Za informacije o cenama, količinama i svemu ostalom što vas zanima, kontaktirajte nas !</p>
 
       </div>
 
@@ -185,18 +228,14 @@
             <button id="contact-btn">Kontaktirajte nas</button>
 
             <div class="social-media">
-                <span><i class="fab fa-facebook-f fa-2x"></i></span>
-                <span><i class="fab fa-instagram fa-2x"></i></span>
+              <span class="social-item"><i class="fab fa-facebook-f fa-2x"></i></span>
+              <span class="social-item"><i class="fab fa-instagram fa-2x"></i></span>
             </div>
           </div>
 
           <div class="map col-lg-8 col-md-6 col-sm-12">
-            <!-- <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=20.577178001403812%2C44.44079693120669%2C20.633826255798343%2C44.46809119658819&amp;layer=mapnik&amp;marker=44.45443034187563%2C20.605502128601074"></iframe> -->
-              <div id='map'></div>
-              <small>
-                <a href="https://www.openstreetmap.org/?mlat=44.4544&amp;mlon=20.6055#map=15/44.4544/20.6055">Uvećajte mapu</a>
-              </small>
+            <div id='map'></div>
+            <a href="https://www.openstreetmap.org/?mlat=44.4544&amp;mlon=20.6055#map=15/44.4544/20.6055">Uvećajte mapu</a>
           </div>
         </div>
 
@@ -208,31 +247,31 @@
 
             <form id="contact-form" action="mailto:mbazovic@live.com" method="POST" enctype="text/plain">
               <div class="row">
-                <div class="col-md-4 col-sm-4 small-coll">
+                <div class="col-md-4 col-sm-4">
                   <label for="name">Unesite ime:</label>
                 </div>
-                <div class="col-md-8 col-sm-8 medium-coll">
+                <div class="col-md-8 col-sm-8">
                   <input id="name" type="text" name="ime" required>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-4 col-sm-4 small-coll">
+                <div class="col-md-4 col-sm-4 ">
                   <label for="email">Vaš email:</label>
                 </div>
-                <div class="col-md-8 col-sm-8 medium-coll">
+                <div class="col-md-8 col-sm-8 ">
                   <input id="email" type="email" name="email" required>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-4 col-sm-4 small-coll">
+                <div class="col-md-4 col-sm-4">
                   <label for="message">Vaša poruka:</label>
                 </div>
-                <div class="col-md-8 col-sm-8 medium-coll">
+                <div class="col-md-8 col-sm-8">
                   <textarea name="message" id="message" cols="20" rows="10" required></textarea>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-12 big-coll">
+                <div class="col-md-12 text-center">
                   <input id="contact-submit" type="submit" value="Pošaljite">
                 </div>
               </div>
@@ -252,7 +291,7 @@
   <!-- Footer -->
 
   <footer id="footer">
-    
+
     Njivica © 2019
 
   </footer>
@@ -260,7 +299,7 @@
   <script src="js/main.js"></script>
 
   <a id="back-2-top" title="Nazad na vrh" href="#"><i class="fas fa-chevron-up"></i></a>
-  
+
 </body>
 
 </html>
