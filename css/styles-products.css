@@ -10,7 +10,7 @@
   text-align: center;
 }
 
-.products h3{
+.products h3, #contact h3{
   color: #faf9f9;
   margin-bottom: 50px;
   text-align: center;
