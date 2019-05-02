@@ -11,4 +11,4 @@ Korišćene su sve tri glavne tehnologije HTML, CSS (osnovni i Bootstrap) i JS (
 
 Sve je upotpunjeno sa nekoliko animacija scroll dugmićima i ikonicama za navigaciju, kako bi se olakšalo korišćenje sajta na mobilnim uređajima.
 
-[![validacija][https://img.shields.io/badge/w3c-html%20validation-success.svg]](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmarrybaz.github.io%2Fweb-site-zavrsni%2F)
+[![validacija](https://img.shields.io/badge/w3c-html%20validation-success.svg)](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmarrybaz.github.io%2Fweb-site-zavrsni%2F)
