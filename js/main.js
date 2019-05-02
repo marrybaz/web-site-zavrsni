@@ -1,5 +1,5 @@
-let d = id => document.getElementById(id);
-let c = className => document.getElementsByClassName(className);
+let d = (id) => document.getElementById(id);
+let c = (className) => document.getElementsByClassName(className);
 
 /**
  * Slider
@@ -24,62 +24,59 @@ let tekst = [
     "Žele do raznog voća za svačiji ukus"
 ];
 
-d('img-placeholder').src = niz[0];
-d('img-desc').innerHTML = tekst[0];
+d("img-placeholder").src = niz[0];
+d("img-desc").innerHTML = tekst[0];
 let index = 0;
 
 // methods
 function sledeci() {
 
     index++;
-    if (index == niz.length) {
+    if (index === niz.length) {
         index = 0;
     }
-    d('img-placeholder').src = niz[index];
-    d('img-desc').innerHTML = tekst[index];
-};
+    d("img-placeholder").src = niz[index];
+    d("img-desc").innerHTML = tekst[index];
+}
 
 function prethodni() {
     index--;
     if (index < 0) {
         index = niz.length - 1;
     }
-    d('img-placeholder').src = niz[index];
-    d('img-desc').innerHTML = tekst[index];
-};
+    d("img-placeholder").src = niz[index];
+    d("img-desc").innerHTML = tekst[index];
+}
 
-// events
-d('img-right').addEventListener('click', sledeci);
-d('img-left').addEventListener('click', prethodni);
-d('img-container').addEventListener('swiped-right', sledeci);
-d('img-container').addEventListener('swiped-left', prethodni);
-d('start-stop').addEventListener('click', toggleInterval)
-
-function toggleInterval() {
-    console.log(d('start-stop').classList);
-    if (d('start-stop').classList.contains('fa-play-circle')) {
-        d('start-stop').classList.replace('fa-play-circle', 'fa-pause-circle');
+function toggleInterval() {    
+    if (d("start-stop").classList.contains("fa-play-circle")) {
+        d("start-stop").classList.replace("fa-play-circle", "fa-pause-circle");
         sledeci();
         intervalId = setInterval(sledeci, 4000);
     } else {
-        d('start-stop').classList.replace('fa-pause-circle', 'fa-play-circle');
+        d("start-stop").classList.replace("fa-pause-circle", "fa-play-circle");
         clearInterval(intervalId);
     }
-};
+}
 
-document.body.addEventListener('keydown', function (event) {
-    if (event.keyCode == 39) {
+// events
+d("img-right").addEventListener("click", sledeci);
+d("img-left").addEventListener("click", prethodni);
+d("img-container").addEventListener("swiped-right", sledeci);
+d("img-container").addEventListener("swiped-left", prethodni);
+d("start-stop").addEventListener("click", toggleInterval);
+
+document.body.addEventListener("keydown", function (event) {
+    if (event.keyCode === 39) {
         sledeci();
-    };
-    if (event.keyCode == 37) {
+    }
+    if (event.keyCode === 37) {
         prethodni();
-    };
-
+    }
 });
 
-
 /**
- * Products 
+ * Products
  */
 
 $(".info-rotate")
@@ -91,45 +88,45 @@ $(".info-rotate")
     });
 
 // products modal
-let s = (state, product = '', url = '') => {
-    if (url !== '') {
+let s = (state, product = "", url = "") => {
+    if (url !== "") {
         // fetchuj sa url-a
-        d('product-title').innerHTML = product;
+        d("product-title").innerHTML = product;
         fetch(url)
-            .then(response => response.json())
-            .then(podatak => {
+            .then((response) => response.json())
+            .then((podatak) => {
                 const pages = podatak.query.pages;
                 const clanak = (Object.values(pages)[0]);//pretvara vrednosti objekta u niz
-                const imgSrc = clanak.thumbnail ? clanak.thumbnail.source : '';
+                const imgSrc = clanak.thumbnail ? clanak.thumbnail.source : "";
 
-                d('product-title').innerHTML += `<img class="zoom" src="${imgSrc}" alt="${clanak.title}">`
-                d('product-info').innerHTML = clanak.extract.substring(0, 1000) + ' <span class="continue"> [...]</span>';
-                d('product-info').innerHTML += `<a href="${clanak.fullurl}" target="_blаnk">Otvori na wiki u novom prozoru</a>`;
+                d("product-title").innerHTML += `<img class="zoom" src="${imgSrc}" alt="${clanak.title}">`
+                d("product-info").innerHTML = clanak.extract.substring(0, 1000) + " <span class=\"continue\"> [...]</span>";
+                d("product-info").innerHTML += `<a href="${clanak.fullurl}" target="_blаnk">Otvori na wiki u novom prozoru</a>`;
 
             })
 
     }
-    d('product-modal').style.display = state;
-    d('overlay').style.display = state;
-    if (state === 'block') {
-        d('content').classList.add('blurred');
+    d("product-modal").style.display = state;
+    d("overlay").style.display = state;
+    if (state === "block") {
+        d("content").classList.add("blurred");
     } else {
-        d('content').classList.remove('blurred');
+        d("content").classList.remove("blurred");
     }
 }
 
-d('close').addEventListener('click', function () {
-    s('none');
+d("close").addEventListener("click", function () {
+    s("none");
 });
 
-d('overlay').addEventListener('click', function (event) {
-    s('none');
+d("overlay").addEventListener("click", function () {
+    s("none");
 })
 
-let infos = c('info');
+let infos = c("info");
 for (let i = 0; i < infos.length; i++) {
-    infos[i].addEventListener('click', function (e) {
-        s('block', e.target.dataset.product, e.target.dataset.url);
+    infos[i].addEventListener("click", function (e) {
+        s("block", e.target.dataset.product, e.target.dataset.url);
     });
 }
 
@@ -138,39 +135,39 @@ for (let i = 0; i < infos.length; i++) {
  *  Contact
  */
 
-d('contact-btn').onclick = function () {
-    if (d('name').value !== '') {
+d("contact-btn").onclick = function () {
+    if (d("name").value !== "") {
         // name already filled ask if another message should be sent
-        if (confirm("Poruku ste već poslali. Da li želite da pošaljete novu poruku?")) {
-            d('message').value = '';
-            d('contact-modal').style.display = "block";
+        if (window.confirm("Poruku ste već poslali. Da li želite da pošaljete novu poruku?")) {
+            d("message").value = "";
+            d("contact-modal").style.display = "block";
         }
     } else {
         // no name enetered in form, open form
-        d('contact-modal').style.display = "block";
+        d("contact-modal").style.display = "block";
 
     }
 }
 
 
-c('close')[0].onclick = function () {
-    d('contact-modal').style.display = "none";
+c("close")[0].onclick = function () {
+    d("contact-modal").style.display = "none";
 }
 
 
 window.onclick = function (event) {
-    if (event.target == d('contact-modal')) {
-        d('contact-modal').style.display = "none";
+    if (event.target === d("contact-modal")) {
+        d("contact-modal").style.display = "none";
     }
 }
 
-$('#contact-form').submit(function (e) {
+$("#contact-form").submit(function (e) {
     e.preventDefault();
     this.submit();
-    $('#contact-modal').hide();
+    $("#contact-modal").hide();
 });
 
-$('#contact-form').captcha();
+$("#contact-form").captcha();
 
 /**
  * Navigation
@@ -179,13 +176,13 @@ $('#contact-form').captcha();
 $(window).scroll(function () {
     var height = $(window).scrollTop();
     if (height > 50) {
-        $('#back-2-top').fadeIn();
-        $('#about-nav, #product-nav, #contact-nav').fadeIn();
-        $('#scroll-down').fadeOut();
+        $("#back-2-top").fadeIn();
+        $("#about-nav, #product-nav, #contact-nav").fadeIn();
+        $("#scroll-down").fadeOut();
     } else {
-        $('#scroll-down').fadeIn();
-        $('#back-2-top').fadeOut();
-        $('#about-nav, #product-nav, #contact-nav').fadeOut();
+        $("#scroll-down").fadeIn();
+        $("#back-2-top").fadeOut();
+        $("#about-nav, #product-nav, #contact-nav").fadeOut();
     }
 });
 
@@ -193,19 +190,18 @@ $(window).scroll(function () {
  * Map
  */
 
-let map = L.map('map').setView([44.453857, 20.607235], 15);
+let map = L.map("map").setView([44.453857, 20.607235], 15);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors"
 }).addTo(map);
 
 let njivicaIcon = L.icon({
-    iconUrl: 'images/logo-sm.png',
-    shadowUrl: 'images/logo-sm-shadow.png',
+    iconUrl: "images/logo-sm.png",
+    shadowUrl: "images/logo-sm-shadow.png",
     iconSize: [60, 40], // size of the icon
     shadowSize: [60, 40], // size of the shadow
     iconAnchor: [30, 20], // point of the icon which will correspond to marker's location
-    // shadowAnchor: [4, 62], // the same for the shadow                
     popupAnchor: [5, -15] // point from which the popup should open relative to the iconAnchor
 });
 
@@ -215,22 +211,18 @@ L.marker([44.453857, 20.607235], { icon: njivicaIcon }).bindPopup("Njivica okupa
  * Geolocation
  */
 
-d('direction').addEventListener('click', function (e) {
-    getLocation();
-});
-
 function openPosition(position) {
-    let link = '';
+    let link = "";
     if (position) {
-        link = 'https://maps.google.com/?saddr=' + position.coords.latitude + ',' + position.coords.longitude + '&daddr=44.453857, 20.60723';
+        link = "https://maps.google.com/?saddr=" + position.coords.latitude + "," + position.coords.longitude + "&daddr=44.453857, 20.60723";
     } else {
-        link = 'https://maps.google.com/?daddr=44.453857, 20.60723';
+        link = "https://maps.google.com/?daddr=44.453857, 20.60723";
     }
-    window.open(link, '_blank');
+    window.open(link, "_blank");
 }
 
-function openDirection(err) {
-    window.open('https://maps.google.com/?daddr=44.453857, 20.60723', '_blank');
+function openDirection() {
+    window.open("https://maps.google.com/?daddr=44.453857, 20.60723", "_blank");
 }
 
 function getLocation() {
@@ -244,6 +236,10 @@ function getLocation() {
                 maximumAge: 0
             });
     } else {
-        alert('Geolokacija nije podržana');
+        alert("Geolokacija nije podržana");
     }
 }
+
+d("direction").addEventListener("click", function () {
+    getLocation();
+});

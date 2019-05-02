@@ -12,3 +12,7 @@ Korišćene su sve tri glavne tehnologije HTML, CSS (osnovni i Bootstrap) i JS (
 Sve je upotpunjeno sa nekoliko animacija scroll dugmićima i ikonicama za navigaciju, kako bi se olakšalo korišćenje sajta na mobilnim uređajima.
 
 [![validacija](https://img.shields.io/badge/w3c-html%20validation-success.svg)](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmarrybaz.github.io%2Fweb-site-zavrsni%2F)
+[![validacija](https://img.shields.io/badge/w3c%20css-styles%20validation-success.svg)](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmarrybaz.github.io%2Fweb-site-zavrsni%2Fcss%2Fstyles.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+[![validacija](https://img.shields.io/badge/w3c%20css-styles%20products%20validation-success.svg)](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmarrybaz.github.io%2Fweb-site-zavrsni%2Fcss%2Fstyles-products.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+[![validacija](https://img.shields.io/badge/w3c%20css-styles%20contact%20validation-success.svg)](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmarrybaz.github.io%2Fweb-site-zavrsni%2Fcss%2Fstyles-contact.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+[![validacija](https://img.shields.io/badge/w3c%20css-styles%20resp%20validation-success.svg)](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmarrybaz.github.io%2Fweb-site-zavrsni%2Fcss%2Fstyles-resp.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
