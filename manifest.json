@@ -1,0 +1,31 @@
+{
+  "short_name": "Njivica",
+
+  "name": "Njivica",
+  "icons": [
+    {
+      "src": "https://marrybaz.github.io/web-site-zavrsni/images/logo192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://marrybaz.github.io/web-site-zavrsni/images/logo256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "https://marrybaz.github.io/web-site-zavrsni/images/logo512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "https://marrybaz.github.io/web-site-zavrsni/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#add2c9",
+  "orientation": "portrait",
+  "related_applications": [{
+    "platform": "web",
+    "url": "https://marrybaz.github.io/web-site-zavrsni/"
+  }]
+}
