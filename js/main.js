@@ -243,3 +243,15 @@ function getLocation() {
 d("direction").addEventListener("click", function () {
     getLocation();
 });
+
+/**
+ * Add to home screen - android
+ */
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(function(reg){
+        console.log("Prečica je postavljena!");
+     }).catch(function(err) {
+        console.log("Neuspelo kreiranje prečice:", err)
+    });
+ }
