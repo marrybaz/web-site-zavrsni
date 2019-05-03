@@ -1,12 +1,12 @@
 var CACHE_NAME = 'njivica-cache-v1';
 var urlsToCache = [
-  '/',
-  '/images/dzem.jpg',
-  '/images/kupine-slatko.jpg',
-  '/css/styles.css',
-  '/css/styles-contact.css',
-  '/css/styles-products.css',
-  '/js/main.js'
+  '/web-site-zavrsni/',
+  '/web-site-zavrsni/images/dzem.jpg',
+  '/web-site-zavrsni/images/kupine-slatko.jpg',
+  '/web-site-zavrsni/css/styles.css',
+  '/web-site-zavrsni/css/styles-contact.css',
+  '/web-site-zavrsni/css/styles-products.css',
+  '/web-site-zavrsni/js/main.js'
 ];
 
 self.addEventListener('install', function(event) {
