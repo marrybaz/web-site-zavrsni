@@ -19,7 +19,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "https://marrybaz.github.io/web-site-zavrsni/",
+  "start_url": "/web-site-zavrsni/index.html",
   "display": "fullscreen",
   "background_color": "#fff",
   "theme_color": "#add2c9",
