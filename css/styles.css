@@ -14,6 +14,13 @@ p{
     color: #8f8f8f;
 }
 
+/* a2hs */
+.add-button {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+}
+
 .wrapper{
     padding: 7% 15%;
 }
