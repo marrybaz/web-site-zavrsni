@@ -22,10 +22,5 @@
   "start_url": "/web-site-zavrsni/index.html",
   "display": "fullscreen",
   "background_color": "#fff",
-  "theme_color": "#add2c9",
-  "orientation": "portrait",
-  "related_applications": [{
-    "platform": "web",
-    "url": "/web-site-zavrsni/index.html"
-  }]
+  "theme_color": "#add2c9"
 }
