@@ -7,7 +7,7 @@ let c = (className) => document.getElementsByClassName(className);
 
 // init data
 let intervalId;
-let niz = [
+const niz = [
     "images/ajvar.jpg",
     "images/kuvani-paradajz.jpg",
     "images/slatko.jpg",
@@ -15,7 +15,7 @@ let niz = [
     "images/kupine-slatko.jpg",
     "images/zele.jpg"
 ];
-let tekst = [
+const tekst = [
     "Domaći ajvar od pečenih paprika",
     "Kuvani paradajz sa zaćinskim biljem",
     "Slatko po receptima naših baka",
@@ -32,6 +32,7 @@ let index = 0;
 function sledeci() {
 
     index++;
+    // loop images
     if (index === niz.length) {
         index = 0;
     }
@@ -41,6 +42,7 @@ function sledeci() {
 
 function prethodni() {
     index--;
+    // loop images
     if (index < 0) {
         index = niz.length - 1;
     }
