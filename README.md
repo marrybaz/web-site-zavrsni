@@ -12,7 +12,7 @@ Sastoji se iz nekoliko celina, a to su:
 
 Korišćene su sve tri glavne tehnologije HTML, CSS (osnovni i Bootstrap) i JS (bez frejmvorka kao i jQuery). Za prikazivanje mape korišćen je [Leaflet](https://leafletjs.com/). Za CAPTCHA jQuery plugin [jQuery Captcha Basic](https://github.com/pemre/jquery-captcha-basic). Za swipe na mobilnim telefonima je korišćen [swiped-events](https://github.com/john-doherty/swiped-events).
 
-Kako bi prezentacija bila brža na android telefonima korišćeno je keširanje kroz [Service Workers](https://developers.google.com/web/fundamentals/primers/service-workers/).  Za navigaciju je iskrošćen (Geolocation API)[https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API].
+Kako bi prezentacija bila brža na android telefonima korišćeno je keširanje kroz [Service Workers](https://developers.google.com/web/fundamentals/primers/service-workers/).  Za navigaciju je iskrošćen [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API).
 
 Sve je upotpunjeno sa nekoliko animacija scroll dugmićima i ikonicama za navigaciju, kako bi se olakšalo korišćenje sajta na mobilnim uređajima.
 
