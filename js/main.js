@@ -90,6 +90,14 @@ $(".info-rotate")
     });
 
 // products modal
+
+/**
+ * Show/hide modal & fetch data
+ * 
+ * @param {"none","block"} state Display parameter for modal, layout
+ * @param {string} product Product name
+ * @param {string} url Product fetch url
+ */
 let s = (state, product = "", url = "") => {
     if (url !== "") {
         // fetchuj sa url-a
@@ -176,7 +184,7 @@ $("#contact-form").captcha();
  */
 
 $(window).scroll(function () {
-    var height = $(window).scrollTop();
+    let height = $(window).scrollTop();
     if (height > 50) {
         $("#back-2-top").fadeIn();
         $("#about-nav, #product-nav, #contact-nav").fadeIn();
@@ -247,7 +255,7 @@ d("direction").addEventListener("click", function () {
 });
 
 /**
- * Add to home screen - android
+ * a2hs, cache - android - inspiration https://github.com/mdn/pwa-examples/tree/master/a2hs
  */
 
 // installing service worker
@@ -260,7 +268,7 @@ if ('serviceWorker' in navigator) {
     });
  }
 
-// prompt a2hs question inspiration https://github.com/mdn/pwa-examples/tree/master/a2hs
+
 let deferredPrompt;
 const addBtn = document.querySelector(".add-button");
 addBtn.style.display = "none";
